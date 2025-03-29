@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QDebug>
+#include "controlmenu.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,11 +17,11 @@ public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
 
+  static MainWindow *createClient();
+
 private slots:
   void on_newConnection_triggered();
-
   void on_exitProgram_triggered();
-
   void on_openPrivateChat_triggered();
 
 private:

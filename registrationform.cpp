@@ -17,10 +17,12 @@ void RegistrationForm::on_loginFormBtn_clicked()
 {
 
 }
-
-
 void RegistrationForm::on_buttonBox_accepted()
 {
 
 }
 
+void RegistrationForm::on_buttonBox_rejected()
+{
+
+}

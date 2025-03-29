@@ -18,9 +18,12 @@ void LoginForm::on_registrationFormBtn_clicked()
 
 }
 
-
 void LoginForm::on_buttonBox_accepted()
 {
 
 }
 
+void LoginForm::on_buttonBox_rejected()
+{
+
+}

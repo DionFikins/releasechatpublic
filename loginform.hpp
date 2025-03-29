@@ -17,8 +17,8 @@ public:
 
 private slots:
   void on_registrationFormBtn_clicked();
-
   void on_buttonBox_accepted();
+  void on_buttonBox_rejected();
 
 private:
   Ui::LoginForm *ui;

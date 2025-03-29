@@ -9,8 +9,14 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow() { delete ui; }
 
-void MainWindow::on_newConnection_triggered() {
+MainWindow *MainWindow::createClient()
+{
+  ControlMenu cm;
+  cm.exec();
+}
 
+void MainWindow::on_newConnection_triggered() {
+  createClient();
 }
 
 void MainWindow::on_exitProgram_triggered() {

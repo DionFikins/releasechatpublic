@@ -16,8 +16,8 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
-     <widget class="LoginForm" name="loginForm"/>
-     <widget class="RegistrationForm" name="registraionForm"/>
+     <widget class="LoginForm" name="loginwidget"/>
+     <widget class="RegistrationForm" name="registrationwidget"/>
     </widget>
    </item>
   </layout>
