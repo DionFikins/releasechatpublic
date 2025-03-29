@@ -15,11 +15,12 @@ public:
   explicit RegistrationForm(QWidget *parent = nullptr);
   ~RegistrationForm();
 
+signals:
+  void loginRequested();
+
 private slots:
   void on_loginFormBtn_clicked();
-
   void on_buttonBox_accepted();
-
   void on_buttonBox_rejected();
 
 private:

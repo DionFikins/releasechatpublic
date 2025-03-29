@@ -2,6 +2,8 @@
 #define LOGINFORM_HPP
 
 #include <QWidget>
+#include <QDebug>
+#include "connectiontoserver.hpp"
 
 namespace Ui {
   class LoginForm;
@@ -14,6 +16,15 @@ class LoginForm : public QWidget
 public:
   explicit LoginForm(QWidget *parent = nullptr);
   ~LoginForm();
+
+  int _idLogin;
+
+  ConnectionToServer *srv = new ConnectionToServer;
+
+  void Logining();
+
+signals:
+  void registrationRequested();
 
 private slots:
   void on_registrationFormBtn_clicked();

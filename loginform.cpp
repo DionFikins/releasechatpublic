@@ -3,27 +3,28 @@
 
 LoginForm::LoginForm(QWidget *parent) :
   QWidget(parent),
-  ui(new Ui::LoginForm)
-{
+  ui(new Ui::LoginForm) {
   ui->setupUi(this);
 }
 
-LoginForm::~LoginForm()
-{
-  delete ui;
-}
+LoginForm::~LoginForm() { delete ui; }
 
-void LoginForm::on_registrationFormBtn_clicked()
-{
+void LoginForm::on_registrationFormBtn_clicked() { emit registrationRequested(); }
 
-}
+void LoginForm::on_buttonBox_accepted() { Logining(); }
 
-void LoginForm::on_buttonBox_accepted()
-{
+void LoginForm::on_buttonBox_rejected() { this->close(); }
 
-}
-
-void LoginForm::on_buttonBox_rejected()
-{
-
+void LoginForm::Logining() {
+  srv->ConnServer();
+  if(srv->connectionstatus != 0) qDebug() << "Error to connection server";
+  else {
+    qDebug() << ui->loginEdit->text();
+    qDebug() << ui->passwordEdit->text();
+    srv->EnterMessage("select id_user from users where login_user = "
+                      + ui->loginEdit->text().toStdString()
+                      + " pass_user = " + ui->passwordEdit->text().toStdString());
+    std::string value = srv->ServerUpdate();
+    _idLogin = atoi(value.c_str());
+  }
 }

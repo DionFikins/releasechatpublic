@@ -38,6 +38,8 @@ set(PROJECT_SOURCES
         controlmenu.cpp
         controlmenu.hpp
         controlmenu.ui
+        connectiontoserver.cpp
+        connectiontoserver.hpp
         ${TS_FILES}
 )
 

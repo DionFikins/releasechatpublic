@@ -15,6 +15,9 @@ public:
   explicit ControlMenu(QWidget *parent = nullptr);
   ~ControlMenu();
 
+  void setLoginForm();
+  void setRegistrationForm();
+
 private:
   Ui::ControlMenu *ui;
 };

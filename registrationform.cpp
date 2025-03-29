@@ -15,7 +15,7 @@ RegistrationForm::~RegistrationForm()
 
 void RegistrationForm::on_loginFormBtn_clicked()
 {
-
+  emit loginRequested();
 }
 void RegistrationForm::on_buttonBox_accepted()
 {

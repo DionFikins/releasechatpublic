@@ -13,6 +13,7 @@ MainWindow *MainWindow::createClient()
 {
   ControlMenu cm;
   cm.exec();
+  return nullptr;
 }
 
 void MainWindow::on_newConnection_triggered() {
