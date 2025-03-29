@@ -16,12 +16,26 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
-     <widget class="QWidget" name="loginForm"/>
-     <widget class="QWidget" name="registraionForm"/>
+     <widget class="LoginForm" name="loginForm"/>
+     <widget class="RegistrationForm" name="registraionForm"/>
     </widget>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>LoginForm</class>
+   <extends>QWidget</extends>
+   <header>loginform.hpp</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>RegistrationForm</class>
+   <extends>QWidget</extends>
+   <header>registrationform.hpp</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

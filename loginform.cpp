@@ -12,3 +12,15 @@ LoginForm::~LoginForm()
 {
   delete ui;
 }
+
+void LoginForm::on_registrationFormBtn_clicked()
+{
+
+}
+
+
+void LoginForm::on_buttonBox_accepted()
+{
+
+}
+

@@ -1,21 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>LoginForm</class>
  <widget class="QWidget" name="LoginForm">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>285</width>
+    <height>108</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QSplitter" name="splitter_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Логин:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="loginEdit"/>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSplitter" name="splitter_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Пароль:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="passwordEdit">
+      <property name="echoMode">
+       <enum>QLineEdit::PasswordEchoOnEdit</enum>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QDialogButtonBox" name="buttonBox">
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="standardButtons">
+       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="registrationFormBtn">
+      <property name="text">
+       <string>Регистрация</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
  </widget>
- <pixmapfunction/>
+ <resources/>
  <connections/>
 </ui>
