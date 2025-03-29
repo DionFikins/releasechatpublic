@@ -16,6 +16,13 @@ public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
 
+private slots:
+  void on_newConnection_triggered();
+
+  void on_exitProgram_triggered();
+
+  void on_openPrivateChat_triggered();
+
 private:
   Ui::MainWindow *ui;
 };
