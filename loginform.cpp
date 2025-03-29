@@ -17,13 +17,13 @@ void LoginForm::on_buttonBox_rejected() { this->close(); }
 
 void LoginForm::Logining() {
   srv->ConnServer();
-  if(srv->connectionstatus != 0) qDebug() << "Error to connection server";
+  if(srv->connectionstatus != 0) qDebug() << "Error connection program";
   else {
     qDebug() << ui->loginEdit->text();
     qDebug() << ui->passwordEdit->text();
-    srv->EnterMessage("select id_user from users where login_user = "
+    srv->EnterMessage("select id_user from users where login_user = '"
                       + ui->loginEdit->text().toStdString()
-                      + " pass_user = " + ui->passwordEdit->text().toStdString());
+                      + "' and pass_user = '" + ui->passwordEdit->text().toStdString() + "'");
     std::string value = srv->ServerUpdate();
     _idLogin = atoi(value.c_str());
   }

@@ -10,17 +10,8 @@ ControlMenu::ControlMenu(QWidget *parent) :
   connect(ui->registrationwidget, &RegistrationForm::loginRequested, this, &ControlMenu::setLoginForm);
 }
 
-ControlMenu::~ControlMenu()
-{
-  delete ui;
-}
+ControlMenu::~ControlMenu() { delete ui; }
 
-void ControlMenu::setLoginForm()
-{
-  ui->stackedWidget->setCurrentIndex(0);
-}
+void ControlMenu::setLoginForm() { ui->stackedWidget->setCurrentIndex(0); }
 
-void ControlMenu::setRegistrationForm()
-{
-  ui->stackedWidget->setCurrentIndex(1);
-}
+void ControlMenu::setRegistrationForm() { ui->stackedWidget->setCurrentIndex(1); }
