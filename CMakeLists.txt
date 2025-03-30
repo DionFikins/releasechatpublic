@@ -40,6 +40,8 @@ set(PROJECT_SOURCES
         controlmenu.ui
         connectiontoserver.cpp
         connectiontoserver.hpp
+        databaseconnection.cpp
+        databaseconnection.hpp
         ${TS_FILES}
 )
 

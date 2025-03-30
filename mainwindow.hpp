@@ -5,6 +5,8 @@
 #include <QDebug>
 #include "controlmenu.hpp"
 #include "connectiontoserver.hpp"
+#include "databaseconnection.hpp"
+#include "loginform.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,6 +23,8 @@ public:
   static MainWindow *createClient();
 
   ConnectionToServer *srv = new ConnectionToServer;
+  DataBaseConnection *db = new DataBaseConnection;
+  LoginForm *lg = new LoginForm;
 
 private slots:
   void on_newConnection_triggered();

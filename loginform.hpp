@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QDebug>
 #include "connectiontoserver.hpp"
+#include "databaseconnection.hpp"
 
 namespace Ui { class LoginForm; }
 
@@ -16,6 +17,9 @@ public:
   ~LoginForm();
 
   ConnectionToServer *srv = new ConnectionToServer;
+  DataBaseConnection *db = new DataBaseConnection;
+
+  int _idLoginUser;
 
   void Logining();
 

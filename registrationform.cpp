@@ -13,20 +13,13 @@ void RegistrationForm::on_loginFormBtn_clicked() { emit loginRequested(); }
 void RegistrationForm::on_buttonBox_accepted() { registrationUser(); }
 
 void RegistrationForm::on_buttonBox_rejected() {
-  ui->loginEdit->text().clear();
-  ui->passEdit->text().clear();
-  ui->nameEdit->text().clear();
+  ui->loginEdit->clear();
+  ui->passEdit->clear();
+  ui->nameEdit->clear();
 }
 
 void RegistrationForm::registrationUser() {
-  srv->ConnServer();
-  qDebug() << ui->loginEdit->text();
-  qDebug() << ui->passEdit->text();
-  qDebug() << ui->nameEdit->text();
-  srv->EnterMessage("insert into users (login_user, pass_user, name_user) values ('"
-                    + ui->loginEdit->text().toStdString()
-                    + "', '" + ui->passEdit->text().toStdString()
-                    + "', '" + ui->nameEdit->text().toStdString() + "')");
-  std::string value = srv->ServerUpdate();
-  qDebug() << value.c_str();
+  db->registrationDB(ui->loginEdit->text(), ui->passEdit->text(), ui->nameEdit->text());
+  qDebug() << "Registration complited";
+  this->on_buttonBox_rejected();
 }

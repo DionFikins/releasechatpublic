@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "connectiontoserver.hpp"
+#include "databaseconnection.hpp"
 
 namespace Ui {
   class RegistrationForm;
@@ -17,6 +18,7 @@ public:
   ~RegistrationForm();
 
   ConnectionToServer *srv = new ConnectionToServer;
+  DataBaseConnection *db = new DataBaseConnection;
 
 signals:
   void loginRequested();

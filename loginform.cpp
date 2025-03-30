@@ -14,9 +14,12 @@ void LoginForm::on_registrationFormBtn_clicked() { emit registrationRequested();
 void LoginForm::on_buttonBox_accepted() { Logining(); }
 
 void LoginForm::on_buttonBox_rejected() {
-  ui->loginEdit->text() = "";
-  ui->passwordEdit->text() = "";
+  ui->loginEdit->clear();
+  ui->passwordEdit->clear();
 }
 
 void LoginForm::Logining() {
+  _idLoginUser = db->loginDB(ui->loginEdit->text(), ui->passwordEdit->text());
+  qDebug() << "Logining";
+  this->on_buttonBox_rejected();
 }

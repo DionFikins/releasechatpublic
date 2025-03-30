@@ -11,15 +11,11 @@
 
 class ConnectionToServer
 {
-private:
-  int sock;
-  struct sockaddr_in server_address;
-  char buffer[1024];
-
-protected:
-  bool connectionstatus;
-
 public:
+  int sock;
+  char buffer[1024];
+  struct sockaddr_in server_address;
+
   int _idUserConnection;
   ConnectionToServer();
 
