@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QDebug>
 #include "controlmenu.hpp"
+#include "connectiontoserver.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,10 +20,13 @@ public:
 
   static MainWindow *createClient();
 
+  ConnectionToServer *srv = new ConnectionToServer;
+
 private slots:
   void on_newConnection_triggered();
   void on_exitProgram_triggered();
   void on_openPrivateChat_triggered();
+  void on_updateChats_triggered();
 
 private:
   Ui::MainWindow *ui;

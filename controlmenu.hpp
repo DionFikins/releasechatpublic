@@ -2,6 +2,7 @@
 #define CONTROLMENU_HPP
 
 #include <QDialog>
+#include "connectiontoserver.hpp"
 
 namespace Ui {
   class ControlMenu;
@@ -14,6 +15,8 @@ class ControlMenu : public QDialog
 public:
   explicit ControlMenu(QWidget *parent = nullptr);
   ~ControlMenu();
+
+  ConnectionToServer *srv = new ConnectionToServer;
 
   void setLoginForm();
   void setRegistrationForm();

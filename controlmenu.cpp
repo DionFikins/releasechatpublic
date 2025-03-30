@@ -12,6 +12,10 @@ ControlMenu::ControlMenu(QWidget *parent) :
 
 ControlMenu::~ControlMenu() { delete ui; }
 
-void ControlMenu::setLoginForm() { ui->stackedWidget->setCurrentIndex(0); }
+void ControlMenu::setLoginForm() {
+  ui->stackedWidget->setCurrentIndex(0);
+}
 
-void ControlMenu::setRegistrationForm() { ui->stackedWidget->setCurrentIndex(1); }
+void ControlMenu::setRegistrationForm() {
+  ui->stackedWidget->setCurrentIndex(1);
+}

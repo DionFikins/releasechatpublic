@@ -5,9 +5,7 @@
 #include <QDebug>
 #include "connectiontoserver.hpp"
 
-namespace Ui {
-  class LoginForm;
-}
+namespace Ui { class LoginForm; }
 
 class LoginForm : public QWidget
 {
@@ -16,8 +14,6 @@ class LoginForm : public QWidget
 public:
   explicit LoginForm(QWidget *parent = nullptr);
   ~LoginForm();
-
-  int _idLogin;
 
   ConnectionToServer *srv = new ConnectionToServer;
 

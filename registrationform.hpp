@@ -2,6 +2,7 @@
 #define REGISTRATIONFORM_HPP
 
 #include <QWidget>
+#include "connectiontoserver.hpp"
 
 namespace Ui {
   class RegistrationForm;
@@ -15,6 +16,8 @@ public:
   explicit RegistrationForm(QWidget *parent = nullptr);
   ~RegistrationForm();
 
+  ConnectionToServer *srv = new ConnectionToServer;
+
 signals:
   void loginRequested();
 
@@ -22,6 +25,8 @@ private slots:
   void on_loginFormBtn_clicked();
   void on_buttonBox_accepted();
   void on_buttonBox_rejected();
+
+  void registrationUser();
 
 private:
   Ui::RegistrationForm *ui;

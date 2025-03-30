@@ -16,12 +16,15 @@ private:
   struct sockaddr_in server_address;
   char buffer[1024];
 
+protected:
+  bool connectionstatus;
+
 public:
+  int _idUserConnection;
   ConnectionToServer();
 
-  int connectionstatus;
-
-  int ConnServer();
+  void ConnServer();
+  bool ConnStatus();
   void CloseConnection();
   void EnterMessage(std::string message);
   std::string ServerUpdate();
