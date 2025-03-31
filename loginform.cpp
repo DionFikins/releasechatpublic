@@ -20,6 +20,8 @@ void LoginForm::on_buttonBox_rejected() {
 
 void LoginForm::Logining() {
   _idLoginUser = db->loginDB(ui->loginEdit->text(), ui->passwordEdit->text());
+  db->setIdLogin(_idLoginUser);
   qDebug() << "Logining";
+  qDebug() << db->getIdLogin();
   this->on_buttonBox_rejected();
 }

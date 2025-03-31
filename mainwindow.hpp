@@ -3,6 +3,12 @@
 
 #include <QMainWindow>
 #include <QDebug>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
+#include <QSqlTableModel>
+#include <QTableView>
+#include <QTextEdit>
+#include <QKeyEvent>
 #include "controlmenu.hpp"
 #include "connectiontoserver.hpp"
 #include "databaseconnection.hpp"
@@ -24,13 +30,18 @@ public:
 
   ConnectionToServer *srv = new ConnectionToServer;
   DataBaseConnection *db = new DataBaseConnection;
-  LoginForm *lg = new LoginForm;
+  LoginForm lg;
 
 private slots:
   void on_newConnection_triggered();
   void on_exitProgram_triggered();
   void on_openPrivateChat_triggered();
   void on_updateChats_triggered();
+
+  void TableViewLoadPublic();
+  void TableViewLoadPrivate(QString name, int idUser);
+
+  void on_publicEdit_returnPressed();
 
 private:
   Ui::MainWindow *ui;

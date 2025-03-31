@@ -18,10 +18,10 @@ public:
 
   ConnectionToServer *srv = new ConnectionToServer;
   DataBaseConnection *db = new DataBaseConnection;
-
-  int _idLoginUser;
-
   void Logining();
+
+  int getLogin() const;
+  void setIdLogin() const;
 
 signals:
   void registrationRequested();
@@ -32,6 +32,7 @@ private slots:
   void on_buttonBox_rejected();
 
 private:
+  int _idLoginUser;
   Ui::LoginForm *ui;
 };
 
